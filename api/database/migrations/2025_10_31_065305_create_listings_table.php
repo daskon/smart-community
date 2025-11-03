@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('type');
             $table->string('price');
+            $table->enum('pricing_model', ['per_day','per_hour','flat_rate']);
             $table->string('description');
             $table->string('image');
             $table->timestamps();

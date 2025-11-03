@@ -15,6 +15,7 @@ class Listing extends Model
         'title',
         'type',
         'price',
+        'pricing_model',
         'description',
         'image'
     ];
