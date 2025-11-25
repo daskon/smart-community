@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+      smartcomm:
+        container_name: smart_comm_app
+        build : .
+        ports:
+          - "5173:5173"
+        environment:
+          - VITE_API_URL=http://localhost:5100
+        restart: unless-stopped
+        volumes:
+          - .:/app
+          - /app/node_modules
+        command: npm run dev
